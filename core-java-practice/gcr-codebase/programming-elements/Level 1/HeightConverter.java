@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Height_converter {
+public class HeightConverter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double cm = sc.nextDouble();

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Side_of_Square {
+public class SideOfSquare {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double perimeter = sc.nextDouble();

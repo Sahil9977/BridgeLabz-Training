@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Find_Distance {
+public class FindDistance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double distanceInFeet = sc.nextDouble();

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Discounted_fee_input {
+public class DiscountedFeeInput {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double fee = sc.nextDouble();
