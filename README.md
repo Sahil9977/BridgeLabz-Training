@@ -1,4 +1,4 @@
-Daily Progress Log – BridgeLabz 2215001532
+# Daily Progress Log – BridgeLabz 2215001532
 This log documents the daily progress of tasks completed during the BridgeLabz training
 program (ID: 2215001532), as recorded in the repository’s README. Tasks are grouped
 by week with thematic headings, detailing the work done on each date and day.
