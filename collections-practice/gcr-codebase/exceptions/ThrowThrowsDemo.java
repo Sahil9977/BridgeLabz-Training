@@ -6,7 +6,7 @@ public class ThrowThrowsDemo {
         }
         return (amount * rate * years) / 100;
     }
-
+    
     public static void main(String[] args) {
         try {
             double interest = calculateInterest(10000, 5, 2); 
