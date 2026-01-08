@@ -21,7 +21,6 @@ class BankAccount {
         System.out.println("Withdrawal successful, new balance: " + balance);
     }
 }
-
 public class BankTransactionSystem {
     public static void main(String[] args) {
         BankAccount account = new BankAccount(5000); 
