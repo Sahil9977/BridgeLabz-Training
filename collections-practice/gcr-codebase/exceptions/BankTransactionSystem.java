@@ -4,15 +4,12 @@ class InsufficientBalanceException extends Exception {
         super(message);
     }
 }
-
 class BankAccount {
     private double balance;
 
     public BankAccount(double balance) {
         this.balance = balance;
     }
-
-    // Withdraw method with checked + unchecked exceptions
     public void withdraw(double amount) throws InsufficientBalanceException {
         if (amount < 0) {
             throw new IllegalArgumentException("Invalid amount!");
@@ -27,8 +24,7 @@ class BankAccount {
 
 public class BankTransactionSystem {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount(5000); // initial balance
-
+        BankAccount account = new BankAccount(5000); 
         try {
             account.withdraw(1000);   
             account.withdraw(-200);   
