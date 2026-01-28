@@ -11,10 +11,10 @@ class InvalidFlightException extends Exception{
 
 class Flight{
 	
-//	check the flight number is in format ot not.
+//	check the flight number is in format or not.
 	public static boolean validateFlight(String flightNumber) throws InvalidFlightException {
-		int maxLen = 7;
-		if(flightNumber.length()!=maxLen) {
+		String regex = "^[FL]{2}[-][0-9]{4}";
+		if(!flightNumber.matches(regex)) {
 			throw new InvalidFlightException("The flight number "+flightNumber+" is invalid.");
 		}
 		return true;
