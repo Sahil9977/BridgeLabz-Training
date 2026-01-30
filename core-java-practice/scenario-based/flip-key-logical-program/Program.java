@@ -7,18 +7,19 @@ import java.util.regex.Pattern;
 public class Program {
 	public static void main(String[] args) {
 		
+		Program p = new Program();		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter the word");
 		String input = sc.nextLine();
 		
-		if(CleanseAndInvent(input).length()<1)System.out.println("Invalid Input");
-		else System.out.println(CleanseAndInvent(input));
+		if(p.CleanseAndInvent(input).length()<1)System.out.println("Invalid Input");
+		else System.out.println(p.CleanseAndInvent(input));
 		
 		
 	}
 	
-	public static  String CleanseAndInvent(String input) {
+	public  String CleanseAndInvent(String input) {
 		if(input.length()<6 || input.equals(null))return "";
 		String regex = "[^a-zA-Z]";
 		Matcher matcher= Pattern.compile(regex).matcher(input);
