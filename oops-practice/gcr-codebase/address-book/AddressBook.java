@@ -1,9 +1,9 @@
 package address_book;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddressBook {
-
 	
 	List<Contact> addressBook = new ArrayList<>();
 	
@@ -149,8 +149,35 @@ public class AddressBook {
 	}
 	
 	
+	public List<Contact> sortByName(){
+		return addressBook.stream()
+				// comparing((Contact (this is the type c (varible) -> c.getFirstName()(name) , String.CASE_INSENSITIVE_ORDER))
+				.sorted(Comparator.comparing((Contact c)->c.getFirstName(),String.CASE_INSENSITIVE_ORDER)
+						.thenComparing(Contact::getLastName, String.CASE_INSENSITIVE_ORDER))
+				.toList();
+	}
 	
 	
+	public List<Contact> sortByCity(){
+		return addressBook.stream()
+				// comparing((Contact (this is the type c (varible) -> c.getFirstName()(name) , String.CASE_INSENSITIVE_ORDER))
+				.sorted(Comparator.comparing((Contact c)->c.getCity(),String.CASE_INSENSITIVE_ORDER))
+				.toList();
+	}
 	
-
+	public List<Contact> sortByState(){
+		return addressBook.stream()
+				// comparing((Contact (this is the type c (varible) -> c.getFirstName()(name) , String.CASE_INSENSITIVE_ORDER))
+				.sorted(Comparator.comparing((Contact c)->c.getState(),String.CASE_INSENSITIVE_ORDER))
+				.toList();
+	}
+	
+	public List<Contact> sortByZip(){
+		return addressBook.stream()
+				// comparing((Contact (this is the type c (varible) -> c.getFirstName()(name) , String.CASE_INSENSITIVE_ORDER))
+				.sorted(Comparator.comparingInt(Contact::getZipCode))
+				.toList();
+	}
+	
+	
 }
